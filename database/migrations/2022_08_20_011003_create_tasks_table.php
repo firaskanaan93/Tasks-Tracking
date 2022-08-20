@@ -12,10 +12,10 @@ return new class extends Migration {
 
             $table->string('title');
             $table->text('description')->nullable();
-            $table->bigInteger('assigned_to_id');
+            $table->unsignedBigInteger('assigned_to_id');
             $table->foreign('assigned_to_id')
                 ->references('id')->on('users');
-            $table->bigInteger('assigned_by_id');
+            $table->unsignedBigInteger('assigned_by_id');
             $table->foreign('assigned_by_id')
                 ->references('id')->on('users');
 
