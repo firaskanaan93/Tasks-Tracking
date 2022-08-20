@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/v1/users/search', [\App\Http\Controllers\Api\V1\UserController::class,'search'])
     ->name('api.users.search');
+
+Route::get('/v1/tasks', [\App\Http\Controllers\Api\V1\TaskController::class,'index'])
+    ->name('api.tasks.index');
